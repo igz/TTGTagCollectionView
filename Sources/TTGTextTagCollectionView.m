@@ -76,7 +76,7 @@
     CGSize size = _label.intrinsicContentSize;
     size.width = size.width + _config.getRightfulStyle.extraSpace.width;
     size.height = size.height + _config.getRightfulStyle.extraSpace.height;
-    return _label.intrinsicContentSize;
+    return size;
 }
 
 #pragma mark - Apply config
@@ -136,7 +136,6 @@
     frame.size = finalSize;
     self.frame = frame;
     _label.frame = CGRectInset(self.bounds, _config.getRightfulStyle.extraSpace.width / 2, _config.getRightfulStyle.extraSpace.height / 2);
-    _label.frame = self.bounds;
 }
 
 - (void)updateShadowWithPath:(UIBezierPath *)path {
